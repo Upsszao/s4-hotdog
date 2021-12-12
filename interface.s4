@@ -1,0 +1,299 @@
+<html>
+  <head>
+    <title>S4:HOTDOG</title>
+ 
+    <script  src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+		
+	  
+  </head>
+
+
+<body>
+
+<div class="notifer">
+<div class="header"><h1>Bilgi</h1></div>
+<p>Ekmeğinizi pişirin ve daha sonra tahtaya bırakın.</p>
+</div>
+
+<div class="state1">
+    
+	<!-- Ekmek kızartma -->
+	<div class="grill"></div>
+	
+	<div class="ekmek"></div>
+	
+	<div class="tahta1"></div>
+
+</div>
+
+<div class="state2" >
+    
+	<!-- Sosis pişirme -->
+	<div class="grill2"></div>
+	
+	<div class="sosis"></div>
+	
+	<div class="tabak"></div>
+
+</div>
+
+
+
+<div class="state3">
+
+
+<div class="tahta">
+<div class="sosisliekmegi">
+
+</div>
+
+
+
+</div>
+
+<div class="sos ketcap" data-info="ketcap" ></div>
+<div class="sos mayo" data-info="mayo" ></div>
+<div class="sos hardal" data-info="hardal" ></div>
+
+
+<div class="malzeme domates" data-info="domates" ></div>
+<div class="malzeme marul" data-info="marul" ></div>
+<div class="malzeme sogan" data-info="sogan" ></div>
+<div class="malzeme hiyar" data-info="hiyar" ></div>
+<div class="malzeme peynir" data-info="peynir" ></div>
+<div class="malzeme nane" data-info="nane" ></div>
+<div class="malzeme avakado" data-info="avakado" ></div>
+<div class="malzeme misir" data-info="misir" ></div>
+<div class="malzeme mantar" data-info="mantar" ></div>
+
+
+
+
+
+<div class="right">></div>
+
+<div class="icindekiler">
+<div class="header"><h1>İçindekiler</h1></div>
+
+</div>
+
+
+<div class="malzemeler">
+<div class="header"><h1>Malzemeler</h1></div>
+
+</div>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+.state1 {display:none; }
+.state2 {display:none; }
+.state3 {display:none; }
+
+body {
+    display:none;
+    background: url(img/arkaplan.jpg);
+    background-size: cover;
+	overflow:hidden;
+}
+
+.eklenensos {
+
+    margin: auto;
+    background: url(img/mayo.png) no-repeat;
+    width: 443px;
+    height: 196px;
+    position: absolute;
+    top: 1vh;
+}
+
+
+.right {
+    position: absolute;
+    right: 0;
+    background: rgb(0 0 0 / 65%);
+    color: white;
+    height: 30vh;
+    top: 25vh;
+    line-height: 30vh;
+    font-size: 80px;
+    font-weight: 800;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.ketcap {   background: url(img/kutu/ketcap.png) no-repeat; top: 28vh;  }
+.mayo {   background: url(img/kutu/mayo.png) no-repeat; left: 20vh; }
+.hardal {   background: url(img/kutu/hardal.png) no-repeat;  top: 58vh; }
+
+.sos {
+    display:none;
+    margin: auto;
+    width: 135px;
+    height: 408px;
+    position: absolute;
+    
+}
+
+.malzeme {
+    margin: auto;
+    width: 516px;
+    height: 145px;
+    position: absolute;
+}
+
+.domates {   background: url(img/vegetable/2.png) no-repeat;  top: 58vh; left: 38vh; }
+.marul {   background: url(img/vegetable/1.png) no-repeat;  top: 58vh; }
+.sogan {   background: url(img/vegetable/11.png) no-repeat;  top: 58vh;  left: 68vh;}
+.hiyar {   background: url(img/vegetable/5.png) no-repeat;  top: 58vh;  left: 88vh; }
+.peynir {   background: url(img/vegetable/6.png) no-repeat;  top: 78vh; }
+.nane {   background: url(img/vegetable/8.png) no-repeat;  top: 78vh; }
+.avakado {   background: url(img/vegetable/16.png) no-repeat;  top: 78vh; left: 38vh; }
+.misir {   background: url(img/vegetable/19.png) no-repeat;  top: 78vh; left: 68vh; }
+.mantar {   background: url(img/vegetable/17.png) no-repeat;  top: 78vh; left: 88vh; }
+ 
+
+
+.sosisliekmegi {
+    margin: auto;
+    background: url(img/make4/hotdog.png) no-repeat;
+    width: 500px;
+    height: 209px;
+    position: relative;
+    top: 5vh;
+}
+
+
+ 
+.sosis {
+    background: url(img/make1/sausage1.png) no-repeat;
+    width: 378px;
+    height: 75px;
+    position: relative;
+    top: 25vh;
+	z-index:1000;
+}
+
+.tahta {
+   
+    margin: auto;
+    background: url(img/in_game_stuff.png) no-repeat -230px -941px;
+    width: 552px;
+    height: 331px;
+    position: relative;
+    top: 25vh;
+}
+
+p {
+text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.notifer {
+    margin: auto;
+    width: 350px;
+    height: 150px;
+    background: rgb(0 0 0 / 54%);
+    position: absolute;
+    border-radius: 30px;
+    left: 3vh;
+    top: 6vh;
+}
+
+.grill {
+    margin: auto;
+    background: url(img/make3/grill_1.png) no-repeat;
+    width: 575px;
+    height: 331px;
+    position: relative;
+    top: 25vh;
+}
+
+
+.grill2 {
+    margin: auto;
+    background: url(img/make1/grill_1.png) no-repeat;
+    width: 575px;
+    height: 331px;
+    position: relative;
+    top: 25vh;
+}
+
+.tabak {
+margin: auto;
+    background: url(img/make1/plate.png) no-repeat;
+    width: 297px;
+    height: 141px;
+    position: absolute;
+    bottom: 15vh;
+    left: 40%;
+}
+
+.ekmek {
+    background: url(img/make3/bread1.png) no-repeat;
+    width: 331;
+    height: 253;
+    position: relative;
+    top: 25vh;
+	
+}
+
+.tahta1 {
+    margin: auto;
+    background: url(img/in_game_stuff.png) no-repeat -230px -941px;
+    width: 552px;
+    height: 331px;
+	}
+
+
+.icindekiler {
+    display:none;
+    position: absolute;
+    right: 4vh;
+    background: rgb(0 0 0 / 32%);
+    width: 300px;
+    height: 80%;
+    border-radius: 15px;
+    top: 7vh;
+}
+
+.malzemeler {
+    display:none;
+    position: absolute;
+    left: 4vh;
+    background: rgb(0 0 0 / 32%);
+    width: 300px;
+    height: 80%;
+    border-radius: 15px;
+    top: 7vh;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+</style>
+
+
+
+	<script src="js.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
